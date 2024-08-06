@@ -1,6 +1,5 @@
 sudo apt update<br>
-sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev libqt5gui5 libqt5widgets5 libqt5script5 libqt5xml5 libqt5x11extras5 libqt5dbus5 qtbase5-dev libqt5svg5-dev libncurses5-dev
-sudo apt install libcap-dev libacl1-dev libcrypt-dev libselinux1-dev libseccomp-dev systemd-coredump hwloc
+sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev libqt5gui5 libqt5widgets5 libqt5script5 libqt5xml5 libqt5x11extras5 libqt5dbus5 qtbase5-dev libqt5svg5-dev libncurses5-dev libcap-dev libacl1-dev libcrypt-dev libselinux1-dev libseccomp-dev systemd-coredump hwloc
 
 
 changing configs
