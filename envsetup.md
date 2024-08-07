@@ -28,17 +28,18 @@ https://maofeichen.com/setup-the-extended-berkeley-packet-filter-ebpf-environmen
 <br>bcc installation error modules not found <br>
 https://github.com/iovisor/bcc/issues/4583<br>
 
-3.bpftrace
-install bcc from source 
+3.bpftrace<br>
+install bcc from source <br>
 https://github.com/bpftrace/bpftrace/issues/1855 <br>
-https://arkivm.github.io/bpf/2021/05/31/compiling-bcc-bpftrace/
+https://arkivm.github.io/bpf/2021/05/31/compiling-bcc-bpftrace/<br><br>
 
-install libbpf from source
+install libbpf from source<br>
+```
 git clone https://github.com/libbpf/libbpf
 cd src
 make
 sudo make install
-
+```
 
 
 we can use `gcore pid` to generate coredump of running processes!
