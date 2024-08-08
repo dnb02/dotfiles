@@ -41,6 +41,8 @@ make
 sudo make install
 ```
 
+4. Tracing kernel drivers using gdb
+   <br>URL: https://www.youtube.com/watch?v=aAuw2EVCBBg   
 
 we can use `gcore pid` to generate coredump of running processes!
 Got 800m coredumps
