@@ -40,6 +40,32 @@ cd src
 make
 sudo make install
 ```
+I am getting segfaults on every bpftrace command, i tried solving by searching for similar issues: #664 #853, no change.
+I had troubles in the apt's package manager's bpftrace, so then i compiled from source also.
+ 
+```
+➜  ~ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.4 LTS
+Release:	22.04
+Codename:	jammy
+➜  ~ uname -r
+6.5.0-45-generic
+```
+```
+➜  ~ bpftrace --v
+bpftrace v0.21.0-86-geb73
+
+```
+This is the dmesg output of the segfault
+```
+[ 2478.902182] bpftrace[12230]: segfault at 6ffffffe0 ip 00007f79ff59d934 sp 00007ffc0ff2a508 error 4 in libc.so.6[7f79ff428000+195000] likely on CPU 11 (core 5, socket 0)
+[ 2478.902190] Code: 00 00 00 0f 1f 00 f3 0f bc c0 48 83 ef 7f 48 01 f8 c5 f8 77 c3 90 f3 0f bc c0 48 83 ef 5f 48 01 f8 c5 f8 77 c3 90 48 83 cf 1f <c5> fd 74 4f e1 c5 fd d7 c1 c4 e2 6a f7 c0 85 c0 0f 84 1a ff ff ff
+
+```
+Working with appimages(release pages) has done it!
+
 
 4. Tracing kernel drivers using gdb
    <br>URL: https://www.youtube.com/watch?v=aAuw2EVCBBg   
