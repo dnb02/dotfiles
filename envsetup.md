@@ -1,5 +1,9 @@
 sudo apt update<br>
-sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev libqt5gui5 libqt5widgets5 libqt5script5 libqt5xml5 libqt5x11extras5 libqt5dbus5 qtbase5-dev libqt5svg5-dev libncurses5-dev libcap-dev libacl1-dev libcrypt-dev libselinux1-dev libseccomp-dev systemd-coredump hwloc
+sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev libqt5gui5 libqt5widgets5 libqt5script5 libqt5xml5 libqt5x11extras5 libqt5dbus5 qtbase5-dev libqt5svg5-dev libncurses5-dev libcap-dev libacl1-dev libcrypt-dev libselinux1-dev libseccomp-dev systemd-coredump hwloc<br>
+#for ebpf, xdp (cilium docs)<br>
+sudo apt-get install -y make gcc libssl-dev bc libelf-dev libcap-dev clang gcc-multilib llvm libncurses5-dev git pkg-config libmnl-dev bison flex graphviz<br>
+<br>#for perf src install from kernel src
+<br>sudo apt install libzstd1 libdwarf-dev libdw-dev binutils-dev libcap-dev libelf-dev libnuma-dev python3 python3-dev python-setuptools libssl-dev libunwind-dev libdwarf-dev zlib1g-dev liblzma-dev libaio-dev libtraceevent-dev debuginfod libpfm4-dev libslang2-dev systemtap-sdt-dev libperl-dev binutils-dev libbabeltrace-dev libiberty-dev libzstd-dev<br>
 
 
 changing configs
@@ -70,13 +74,7 @@ Working with appimages(release pages) has done it!
 4. Tracing kernel drivers using gdb
    <br>URL: https://www.youtube.com/watch?v=aAuw2EVCBBg   
 
-we can use `gcore pid` to generate coredump of running processes!
-Got 800m coredumps
-
-how to generate coredumps
-echo "/tmp/%e.%p" | sudo tee /proc/sys/kernel/core_pattern 
-ulimit -c unlimited 
-this updates RLIMIT_CORE which is a soft resource limit!
-now in tmp we can find the coredumps
-
-to use the coredumps we can do gdb <binaryfile> <coredumpfile>
+<br>
+5. bpftool <br>
+Building perf from `tools/perf` using the medium article below removes the bpftools's prompt to install linux-tools
+<br>https://medium.com/@manas.marwah/building-perf-tool-fc838f084f71<br>
