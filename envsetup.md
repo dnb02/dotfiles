@@ -5,6 +5,8 @@ sudo apt-get install -y make gcc libssl-dev bc libelf-dev libcap-dev clang gcc-m
 <br>#for perf src install from kernel src
 <br>sudo apt install libzstd1 libdwarf-dev libdw-dev binutils-dev libcap-dev libelf-dev libnuma-dev python3 python3-dev python-setuptools libssl-dev libunwind-dev libdwarf-dev zlib1g-dev liblzma-dev libaio-dev libtraceevent-dev debuginfod libpfm4-dev libslang2-dev systemtap-sdt-dev libperl-dev binutils-dev libbabeltrace-dev libiberty-dev libzstd-dev<br>
 
+Fonts in Ubuntu<br>
+https://superuser.com/questions/1335155/patched-fonts-not-showing-up-on-gnome-terminal<br><br>
 
 changing configs
 
